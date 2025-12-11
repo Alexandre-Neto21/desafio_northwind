@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_employees
+    description: Tabela com informações dos colaboradores
+    columns:
+      - name: employee_id
+        description: Chave primária da tabela
+        tests:
+          - unique
+          - not_null
