@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_orders
+    description: Tabela de ordens com informações da tabela de detalhes das ordens
+    columns:
+      - name: orders_sk
+        description: Chave primária da tabela
+        tests:
+          - unique
+          - not_null

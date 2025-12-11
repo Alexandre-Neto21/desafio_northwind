@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_products
+    description: Tabela de produtos com informações das tabelas de fornecedor e categoria
+    columns:
+      - name: product_id
+        description: Chave primária da tabela
+        tests:
+          - unique
+          - not_null
