@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: erp_northwind
+    description: Fonte de dados da empresa northwind
+    database: raw
+    schema: erp_northwind
+    tables:
+      - name: categories
+        description: Categorias dos produtos
+      - name: customers
+        description: Informações dos clientes
+      - name: employees
+      - name: order_details
+      - name: orders
+        description: Tabela de pedidos com um pedido por linha
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+              - unique
+      - name: products
+        description: Tabela de pedidos com um pedido por linha
+        columns:
+          - name: product_id
+            tests:
+              - not_null
+              - unique
+      - name: suppliers
