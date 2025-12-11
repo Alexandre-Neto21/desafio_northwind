@@ -44,4 +44,8 @@ models:
       +materialized: table
     marts:
       +materialized: table
-      
+
+seeds:
+  desafio_northwind:
+    +database: raw
+    +schema: erp_northwind
