@@ -12,7 +12,7 @@ with
             , cast(order_date as date)
             , cast(required_date as date)
             , cast(shipped_date as date)
-            , cast(freight as numeric)
+            , cast(freight as numeric(10,2))
             , cast(ship_city as string)
             , cast(ship_country as string)
         from source_orders

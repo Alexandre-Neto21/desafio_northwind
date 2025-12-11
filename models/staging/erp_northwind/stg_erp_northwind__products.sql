@@ -10,7 +10,7 @@ with
             , cast(product_name as string)
             , cast(supplier_id as int)
             , cast(category_id as int)
-            , cast(unit_price as numeric)
+            , cast(unit_price as numeric(10,2))
             , cast(units_in_stock as int)
             , cast(units_on_order as int)
             , cast(reorder_level as int)
