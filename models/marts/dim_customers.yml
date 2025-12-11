@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Tabela com informações dos clientes
+    columns:
+      - name: customer_id
+        description: Chave primária da tabela
+        tests:
+          - unique
+          - not_null

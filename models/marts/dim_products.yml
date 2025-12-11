@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: Tabela de produtos com informações de categorias
+    columns:
+      - name: product_id
+        description: Chave primária da tabela
+        tests:
+          - unique
+          - not_null

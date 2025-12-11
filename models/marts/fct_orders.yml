@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: Tabela de vendas na qual cada linha é a venda de um produto em uma ordem
+    columns:
+      - name: orders_sk
+        description: Chave surrogate da tabela sendo definidada como a concatenação entre o id da ordem e o id do produto
+        tests:
+          - unique
+          - not_null
+      - name: gross_total
+        description: Preço unitário multiplicado pela quantidade vendida
+        tests:
+          - not_null
+      - name: net_total
+        description: Preço unitário com desconto multiplicado pela quantidade vendida
+        tests:
+          - not_null
+      - name: has_discount
+        description: Métrica para distinguir itens vendidos com desconto
+        tests:
+          - accepted_values:
+              values: ['sim', 'não']
+
+      - name: freight_allocated
+        description: Chave surrogate da tabela sendo definidada como a concatenação entre o id da ordem e o id do produto
+               
