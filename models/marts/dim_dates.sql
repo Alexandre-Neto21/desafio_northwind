@@ -3,7 +3,7 @@ with
         {{ dbt_utils.date_spine(
             datepart="day",
             start_date="cast('1996-07-04' as date)",
-            end_date="cast(current_date + interval 1 year as date)"
+            end_date="cast('1998-06-11' as date)"
             )
         }}
     )
