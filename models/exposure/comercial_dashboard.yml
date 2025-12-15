@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+  - name: comercial_dashboard
+    type: dashboard
+    url: https://app.powerbi.com/view?r=eyJrIjoiMGJmNmNkNzUtMjZkOC00NDBjLTlmODEtNWJlM2EwNTJhZTNkIiwidCI6IjI0NzU1NTI2LWE5YWEtNGEwMS04ZjFkLWRlNDk1NjEzYjE3YSJ9&pageName=a79ba657158785847546
+    description: Dashboard executivo
+
+    depends_on:
+      - ref('fct_orders')
+      - ref('dim_products')
+      - ref('dim_employees')
+      - ref('dim_customers')
+      - ref('dim_dates')
+
+    owner:
+      name: Alexandre Neto
+      email: alexandrejorgeneto21@gmail.com
